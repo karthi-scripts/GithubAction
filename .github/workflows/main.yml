@@ -4,5 +4,21 @@ on:
     branches:
       - main
 
+jobs:
+  KDAction:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: clone repo
+      uses: actions/checkout@v3
+
+    - name: Setup python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+
+    - name: Run a script
+      run: python hello.py
       
 
